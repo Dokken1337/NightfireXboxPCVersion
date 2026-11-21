@@ -1,6 +1,6 @@
 # NightFire Xbox – PC Version
 
-A modified version of TGP482's Xbox project with a modernized take of the game: the Xbox version of
+A modified version of hk21x's Xbox project with a modernized take of the game: the Xbox version of
 **007: NightFire**, statically recompiled to run natively on Windows, with PC controls, modern menus and a set of
 quality-of-life features added on top.
 
