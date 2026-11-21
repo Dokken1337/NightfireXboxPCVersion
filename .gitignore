@@ -1,0 +1,19 @@
+# Release builds: upload the zip as a GitHub Release asset, not into the repository
+dist/
+*.zip
+
+# Never commit game files (your own disc image) or anything made from it
+*.iso
+*.xbe
+/assets/
+/generated/
+
+# What the game writes next to itself
+/logs/
+/hdd/
+/screenshots/
+/settings.toml
+/achievements.toml
+/pipelinecache.bin
+/shadercache.bin
+/compiler/work/
