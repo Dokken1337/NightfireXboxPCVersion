@@ -13,7 +13,7 @@ quality-of-life features added on top.
 
 ## Download and setup
 
-1. Download `NightfireXboxPC-v1.5.zip` from the [Releases](../../releases) page and unzip it anywhere.
+1. Download `NightfireXboxPC-v1.6.zip` from the [Releases](../../releases) page and unzip it anywhere.
 2. Put your disc image in the `assets` folder, for example `assets\007 - Nightfire (USA).iso`.
 3. Start **`Nightfire Launcher.exe`** (or `Nightfire.exe`).
 4. The first start compiles the game code from your disc. This takes a few minutes and happens only once (and again
@@ -25,6 +25,22 @@ compiler are included in the zip.
 ---
 
 ## Features
+
+### New in v1.6: high frame rate, ambient occlusion, HDR, surround, texture packs, gyro
+Ported from [TGP482's NightFire port](https://github.com/TGP482/007Nightfire-XBERecomp) and wired into this
+version's PC Settings and F1 window:
+- **Uncapped frame rate.** The game steps by real time, so it keeps its normal speed at 120, 144, 240 fps or more,
+  with fixes for everything that counted 60 fps frames. Frame Cap goes from 30 to 360 or Unlimited. (The driving
+  missions stay at the console's rate.)
+- **Ambient occlusion** (SSAO or GTAO): soft shadows where surfaces meet, fading out with the game's fog.
+- **HDR10** on a display with Windows HDR on, and **5.1 surround** sound.
+- **Texture packs:** images in `textures\replacement` replace the game's own; Dump Textures saves the originals
+  into `textures\dumps` (PNG or DDS) to make one.
+- **Gyro aiming** with a DualSense, DualShock 4, Switch Pro or other gyro controller.
+
+| Ambient occlusion off | GTAO |
+|---|---|
+| ![Ambient occlusion off](docs/screenshots/ambient-occlusion-off.png) | ![GTAO](docs/screenshots/ambient-occlusion.png) |
 
 ### Modern menus
 The whole single-player front end and the pause screen are redrawn in a clean, modern style inspired by the PS2 PC
@@ -47,8 +63,9 @@ and bonus screens, and the credits. Multiplayer and the driving missions' own me
 ### PC Settings in the game
 A **PC Settings** page in the main menu and on the pause screen. It covers field of view, mouse sensitivity, invert
 mouse, aim down sights, wheel slow motion, skipping the intro movies, sharp text, aspect ratio (including
-ultrawide), display mode, resolution, vertical sync and frame cap, plus "Unlock All Codes". More options are in the
-launcher and in the F1 settings window.
+ultrawide), display mode, resolution, vertical sync, frame cap, ambient occlusion, HDR, audio output, texture
+packs and dumping, and gyro aiming, plus "Unlock All Codes". More options are in the launcher and in the F1
+settings window.
 
 ![PC Settings](docs/screenshots/pc-settings.png)
 
@@ -112,19 +129,21 @@ All keys can be changed in the F1 window.
 
 ---
 
-## Changes in v1.5
+## Changes in v1.6
 See [CHANGELOG.md](CHANGELOG.md). Highlights:
-- The driving missions' hints show PC keys ("Pull [left mouse button] to Fire").
-- Equinox: firing the Phoenix Samurai no longer pushes Bond down through the floor.
-- Equinox: the mouse aims in zero gravity the same as in the rest of the game.
-- The weapon wheel works on the driving missions' mounted guns.
-- PC Settings opened from the pause screen: the arrows change the values again.
+- Uncapped frame rate with the game at its normal speed.
+- Ambient occlusion (SSAO / GTAO), HDR10, 5.1 surround, texture packs and dumping, gyro aiming.
+- PC Settings scrolls, with rows for all of the above.
 
 ---
 
 ## Credits and license
-- Based on TGP482's Xbox project: nightfire-recomp, the static recompilation of the Xbox version, built on the
-  XboxXBE-Recomp toolkit. Its licence is in [`licenses/nightfire-recomp-LICENSE.txt`](licenses/nightfire-recomp-LICENSE.txt).
+- Based on Harry's (hk21x) [nightfire-recomp](https://github.com/hk21x/nightfire-recomp), the static
+  recompilation of the Xbox version, built on TGP482's XboxXBE-Recomp toolkit. Its licence is in
+  [`licenses/nightfire-recomp-LICENSE.txt`](licenses/nightfire-recomp-LICENSE.txt).
+- The v1.6 features are ported from TGP482's
+  [007Nightfire-XBERecomp](https://github.com/TGP482/007Nightfire-XBERecomp) (MIT):
+  [`licenses/TGP482-007Nightfire-XBERecomp-LICENSE.txt`](licenses/TGP482-007Nightfire-XBERecomp-LICENSE.txt).
 - Third-party parts of the toolkit: [`licenses/THIRD_PARTY.txt`](licenses/THIRD_PARTY.txt).
 - Menu font: Rajdhani (SIL Open Font License): [`licenses/Rajdhani-OFL.txt`](licenses/Rajdhani-OFL.txt).
 - This repository: [MIT](LICENSE).
